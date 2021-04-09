@@ -25,7 +25,7 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "local-start": "npm run build && (cd server && npm run start)",
-    "start": "npm run build && (cd server && npm run start)"
+    "start": "node react-scripts start"
   },
   "eslintConfig": {
     "extends": [

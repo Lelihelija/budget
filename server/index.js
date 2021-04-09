@@ -1,6 +1,7 @@
 const path = require("path");
 const express = require("express");
 const app = express(); // create express app
+const port = process.env.PORT || 3002;
 
 // add middlewares
 app.use(express.static(path.join(__dirname, "..", "build")));
@@ -15,6 +16,6 @@ app.get("/", (req, res) => {
  });
 
 // start express server on port 3002
-app.listen(3002, () => {
+app.listen(port, () => {
   console.log("server started on port 3002");
 });
