@@ -1,0 +1,32 @@
+//______________________________________________Colors__________________________________________
+//colors list
+$black: #000000;
+$dodger-blue: #5A88FF;
+$lightgrey: #F2F2F2;
+$persimmon: #FF5A5A;
+$platinum: #E7E7E7;
+$saffron-mango: #FAC154;
+$white: #FFFFFF;
+$silver: #b8b8b8;
+
+//backgrounds
+$bg-grey: $silver;
+
+//fonts
+$font-copyright: $platinum;
+$font-white: $white;
+$font-black: $black;
+
+//______________________________________________Transition________________________________________________
+$transition05: 0.5s ease;
+
+//______________________________________________breakpoints_______________________________________________
+$screen-sm-min: map-get($grid-breakpoints, sm); // 576px
+$screen-md-min: map-get($grid-breakpoints, md); // 768px
+$screen-lg-min: map-get($grid-breakpoints, lg); // 992px
+$screen-xl-min: map-get($grid-breakpoints,xl);  // 1350px
+
+$screen-xs-max: $screen-sm-min - 1px; // 575px
+$screen-sm-max: $screen-md-min - 1px; // 767px
+$screen-md-max: $screen-lg-min - 1px; // 991px
+$screen-lg-max: $screen-xl-min - 1px; // 1349px

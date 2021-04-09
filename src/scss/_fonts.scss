@@ -1,0 +1,18 @@
+@mixin font-face ($fontname, $fontfile, $fontweight: normal, $fontstyle: normal) {
+	@font-face {
+		font-family: $fontname;
+		src: url('../fonts/' + $fontfile + '.eot');
+		src: url('../fonts/' + $fontfile + '.eot?#iefix') format('embedded-opentype'),
+			 url('../fonts/' + $fontfile + '.woff') format('woff'),
+			 url('../fonts/' + $fontfile + '.ttf') format('truetype');
+		font-weight: $fontweight;
+		font-style: $fontstyle;
+	}
+};
+
+@include font-face('Futura PT', 'futurapt/futuraptbold', 700, normal);
+@include font-face('Futura PT', 'futurapt/futuraptboldobl', 700, italic);
+@include font-face('Futura PT', 'futurapt/futuraptmedium', 500, normal);
+@include font-face('Futura PT', 'futurapt/futuraptmediumobl', 500, italic);
+@include font-face('Futura PT', 'futurapt/futuraptbook', 400, normal);
+@include font-face('Futura PT', 'futurapt/futuraptbookobl', 400, italic);

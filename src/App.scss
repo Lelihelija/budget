@@ -1,0 +1,8 @@
+//scss general
+@import './scss/customBootstrap';
+@import './scss/variables';
+@import './scss/common';
+@import './scss/fonts';
+
+//bootstrap orininal link. MUST be after a custom bootstrap file
+@import "../node_modules/bootstrap/scss/bootstrap";

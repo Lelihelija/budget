@@ -1,0 +1,58 @@
+html {
+  font-family: "Futura PT", sans-serif !important;
+}
+
+:root {
+  font-family: "Futura PT", sans-serif !important;
+}
+
+body {
+  font-family: inherit !important;
+}
+
+.svg-defs {
+  position: absolute;
+  overflow: hidden;
+  height: 0;
+  width: 0;
+}
+
+
+label {
+  cursor: pointer;
+}
+
+a {
+	text-decoration: none;
+}
+
+ul,
+ol,
+li {
+	list-style: none;
+}
+
+ul {
+  padding-left: 0px;
+  margin-bottom: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-weight: inherit;
+	font-size: inherit;
+}
+
+button {
+  background-color: transparent;
+  padding: 0;
+  border: none;
+}
+
+.app {
+  background-color: $bg-grey;
+}
