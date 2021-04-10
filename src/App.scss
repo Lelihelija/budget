@@ -6,3 +6,12 @@
 
 //bootstrap orininal link. MUST be after a custom bootstrap file
 @import "../node_modules/bootstrap/scss/bootstrap";
+
+//components
+@import './components/ExpencesItem/expencesItem';
+@import './components/Header/header';
+@import './components/Footer/footer';
+@import './components/Login/login';
+@import './components/Main/main';
+
+@import 'react-calendar/dist/Calendar.css';

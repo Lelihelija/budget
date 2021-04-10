@@ -9,23 +9,24 @@
     "@testing-library/user-event": "^12.1.10",
     "axios": "^0.21.1",
     "bootstrap": "^4.6.0",
+    "cors": "^2.8.5",
     "express": "^4.17.1",
+    "http-proxy-middleware": "^1.1.1",
     "react": "^17.0.2",
     "react-bootstrap": "^1.5.2",
+    "react-calendar": "^3.3.1",
     "react-dom": "^17.0.2",
     "react-scripts": "4.0.3",
     "sass": "^1.32.8",
     "web-vitals": "^1.0.1"
   },
   "scripts": {
-    "start-client": "react-scripts start",
+    "start": "react-scripts start",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "local-start": "npm run build && (cd server && npm run start)",
-    "start": "node react-scripts start"
+    "eject": "react-scripts eject"
   },
   "eslintConfig": {
     "extends": [
@@ -46,7 +47,6 @@
     ]
   },
   "devDependencies": {
-    "gh-pages": "^3.1.0",
-    "nodemon": "^2.0.7"
+    "gh-pages": "^3.1.0"
   }
 }

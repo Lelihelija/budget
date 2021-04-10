@@ -53,6 +53,60 @@ button {
   border: none;
 }
 
+label {
+  margin: 0;
+}
+
 .app {
   background-color: $bg-grey;
+
+  &__inner {
+    flex-direction: column;
+    min-height: 100vh;
+    overflow: hidden;
+    display: flex;
+  }
+}
+
+
+.my-button {
+  &-default {
+    background-color: $bg-black;
+    border: 1px solid $black;
+    border-radius: 20px;
+    color: $font-white;
+    display: block;
+    margin: auto;
+  
+    &:hover {
+      background-color: $bg-white;
+      border-color: $black;
+      color: $font-black;
+    }
+  }
+
+  &-small {
+    padding: 4px 60px;
+
+    @media (max-width: $screen-sm-max) {
+      padding: 4px 20px;
+    }
+  }
+
+  &-big {
+    padding: 4px 60px;
+  }
+}
+
+
+.my-input-default {
+  background-color: $bg-input;
+  border-radius: 8px;
+  display: block;
+  padding: 6px;
+  width: 100%;
+
+  &:focus::placeholder {
+    color: transparent;
+  }
 }

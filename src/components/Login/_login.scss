@@ -1,0 +1,27 @@
+.login {
+
+  &-wrapper {
+
+  p {
+    margin-bottom: 0;
+  }
+  }
+
+  &__title {
+    font-weight: 700;
+    font-size: 24px;
+    display: block;
+  }
+
+
+  &__label {
+    display: block;
+    width: 100%;
+  }
+
+  .login__button {
+    margin-top: 20px;
+    display: block;
+    margin: auto;
+  }
+}

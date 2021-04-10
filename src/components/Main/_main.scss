@@ -1,0 +1,82 @@
+.main {
+  padding-top: 20px;
+  flex-grow: 1;
+
+  &__form {
+    padding-bottom: 20px;
+    width: 100%;
+  }
+
+  &__calendar {}
+  &__inputs {
+
+    @media (max-width: $screen-md-max) {
+      margin-top: 30px;
+    }
+  }
+  &__submit-btn {
+    background-color: $bg-btn;
+    border: 1px solid $black;
+    border-radius: 20px;
+    padding: 5px 10px;
+    display: block;
+    margin: auto;
+
+    &:hover {
+      background-color: $bg-white;
+    }
+  }
+  &__amount,
+  &__category {
+    display: block;
+  }
+
+  &__amount {}
+  &__category {}
+
+  &__info {
+    padding-bottom: 20px;
+    padding-top: 20px;
+
+    &-title {
+      padding-bottom: 20px;
+      display: block;
+    }
+
+    &-wrapper {
+      grid-template-columns: repeat(4,1fr);
+      grid-template-rows: repeat(3,1fr);
+      grid-gap: 30px;
+      display: grid;
+
+      @media (max-width: $screen-xs-max) {
+        grid-gap: 10px;
+      }
+    }
+
+    &-title {
+      font-weight: 700;
+      font-size: 24px;
+    }
+
+    &-item {
+      span {
+        word-break: break-word;
+        font-weight: 700;
+      }
+    }
+  }
+}
+
+.react-calendar {
+  border-radius: 8px;
+
+  @media (max-width: $screen-md-max) {
+    display: block;
+    margin: auto;
+  }
+
+  &__tile--active {
+    background-color: $bg-mango;
+  }
+}

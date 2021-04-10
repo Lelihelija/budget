@@ -1,7 +1,40 @@
 .header {
-  __title {
+  justify-content: space-between;
+  padding-bottom: 90px;
+  padding-top: 20px;
+
+  @media (max-width: $screen-sm-max) {
+    padding-bottom: 50px;
+    display: block;
+  }
+
+  &__title {
     color: $font-black;
     font-weight: 700;
     font-size: 64px;
+
+    @media (max-width: $screen-md-max) {
+      font-size: 50px;
+    }
+
+    @media (max-width: $screen-sm-max) {
+      text-align: center;
+    }
+
+    @media (max-width: $screen-xs-max) {
+      font-size: 40px;
+    }
   }
+
+  &__user {
+    &-username {
+      word-break: break-word;
+      padding-bottom: 5px;
+      color: $font-white;
+      text-align: center;
+      font-size: 26px;
+      display: block;
+    }
+  }
+
 }
