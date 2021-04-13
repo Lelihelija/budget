@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { useState } from 'react';
 import { Container } from 'react-bootstrap';
 
 import axios from "axios";
@@ -11,32 +11,27 @@ import Main from './components/Main/Main';
 //styles
 import './App.scss';
 
-class App extends Component {
-  state = {
-    users: [],
-  };
+function App() {
+  let [token, setToken] = useState(true);
 
-  componentDidMount() {
-    axios.get("/api/users").then((response) => {
-      console.log(response);
-    });
-  }
+  // componentDidMount() {
+  //   axios.get("/api/users").then((response) => {
+  //     console.log(response);
+  //   });
+  // }
 
-  render() {
-    // const { users } = this.state;
-
-    return (
-      <div className="app">
-        <Container>
-          <div className="app__inner">
-            <Header/>
-            <Main/>
-            <Footer/>
-          </div>
-        </Container>
-      </div>
-    );
-  }
+  return (
+    <div className="app">
+      <Container>
+        <div className="app__inner">
+          <button type="button" onClick={() => setToken(!token)}>Залогінити/розлогінити. тик-тик</button>
+          <Header token={token}/>
+          <Main token={token}/>
+          <Footer/>
+        </div>
+      </Container>
+    </div>
+  );
 };
 
 export default App;

@@ -1,31 +1,17 @@
 import React, {useState, useEffect} from 'react';
 
-export default function ExpencesItem(props) {
+export default function ExpencesItem({data, amountChange, expenceDelete}) {
   let [editOn, setEditOn] = useState(false);
-  let [tempAmount, setTempAmount] = useState(props.data.amount);
+  let [tempAmount, setTempAmount] = useState(data.amount);
+  let id = data.id;
 
-  // useEffect(() => {
-  //   function handleStatusChange(status) {
-  //     setIsOnline(status.isOnline);
-  //   }
-
-    const onChange = (e) => {
-      setTempAmount(e.currentTarget.value);
-      console.log('tempAmount first: ', tempAmount);
+  const onChange = (e) => {
+    setTempAmount(+e.target.value);
   };
 
-  let data = props.data;
-
-  let editItem = () => {
-    console.log('edit: ');
-    setEditOn(true);
-    // setEditOn
-    // return props.changeListener(amount);
-  }
-
-  let confirmEdit = () => {
-    console.log('tempAmount: ', tempAmount);
+  let confirmEdit = (id, tempAmount) => {
     setEditOn(false);
+    amountChange(id, tempAmount);
   };
 
   let cancelEdit = () => {
@@ -34,7 +20,7 @@ export default function ExpencesItem(props) {
 
   let deleteItem = id => {
     console.log('delete: ', id);
-    return props.deleteListener(id);
+    return expenceDelete(id);
   }
 
   return(
@@ -48,8 +34,8 @@ export default function ExpencesItem(props) {
           </div>
           <div className="expencesItem__item">
             <div className="expencesItem__edit-btn-wrapper">
-              <button type="button" className="confirm-edit-btn" onClick={confirmEdit}></button>
-              <button type="button" className="exit-edit-btn" onClick={cancelEdit}></button>
+              <button type="button" className="confirm-edit-btn" onClick={() => confirmEdit(id, tempAmount)}></button>
+              <button type="button" className="exit-edit-btn" onClick={() => cancelEdit()}></button>
             </div>
           </div>
           <div className="expencesItem__item"><button className="my-button-default my-button-small" onClick={() => {deleteItem(data.id)}}>Delete</button></div>
@@ -57,8 +43,8 @@ export default function ExpencesItem(props) {
       :
         <>
           <div className="expencesItem__item"><span>{data.title}</span></div>
-          <div className="expencesItem__item">{data.amount}$</div>
-          <div className="expencesItem__item"><button className="my-button-default my-button-small" onClick={() => {editItem()}}>Edit</button></div>
+          <div className="expencesItem__item amount">{data.amount}$</div>
+          <div className="expencesItem__item"><button className="my-button-default my-button-small" onClick={() => setEditOn(true)}>Edit</button></div>
           <div className="expencesItem__item"><button className="my-button-default my-button-small" onClick={() => {deleteItem(data.id)}}>Delete</button></div>
         </>
   )

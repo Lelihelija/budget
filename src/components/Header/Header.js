@@ -4,8 +4,7 @@ import { Row, Col } from 'react-bootstrap';
 
 import Login from '../Login/Login';
 
-function Header () {
-  const [token, setToken] = useState(false);
+function Header ({token}) {
   const userName = 'Ai-chan';
 
   return (

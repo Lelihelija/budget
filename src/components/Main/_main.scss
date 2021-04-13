@@ -2,6 +2,13 @@
   padding-top: 20px;
   flex-grow: 1;
 
+  &__noaccess {
+    word-break: break-word;
+    text-align: center;
+    font-weight: 700;
+    font-size: 24px;
+  }
+
   &__form {
     padding-bottom: 20px;
     width: 100%;
@@ -36,16 +43,11 @@
 
   &__info {
     padding-bottom: 20px;
-    padding-top: 20px;
-
-    &-title {
-      padding-bottom: 20px;
-      display: block;
-    }
+    padding-top: 40px;
 
     &-wrapper {
       grid-template-columns: repeat(4,1fr);
-      grid-template-rows: repeat(3,1fr);
+      padding-top: 30px;
       grid-gap: 30px;
       display: grid;
 
@@ -54,9 +56,22 @@
       }
     }
 
-    &-title {
+    &-title,
+    &-total,
+    &-total-amount {
+      word-break: break-word;
       font-weight: 700;
       font-size: 24px;
+    }
+
+    &-total {
+      &-amount {
+        padding-left: 40px;
+      }
+
+      &-wrapper {
+        padding-top: 20px;
+      }
     }
   }
 }
