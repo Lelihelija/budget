@@ -146,7 +146,7 @@ class Main extends Component {
                           </div>
                         </>
                       :
-                        <span className="main__info-item">Ви ще нічого не добавили! Замовте хачапурі у будці за рогом.</span>
+                        <div className="main__info-item">Ви ще нічого не добавили! Замовте хачапурі у будці за рогом.</div>
                   }
               </Col>
             </Row>
