@@ -109,4 +109,13 @@ label {
   &:focus::placeholder {
     color: transparent;
   }
+
+  &.invalid {
+    outline-color: $persimmon;
+    border-color: $persimmon;
+  }
+}
+
+.error-info {
+  color: $persimmon;
 }

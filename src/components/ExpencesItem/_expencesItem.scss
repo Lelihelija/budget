@@ -1,0 +1,81 @@
+.expencesItem {
+  &__item {
+    span {
+      word-break: break-word;
+      font-weight: 700;
+    }
+  }
+
+  &__input {
+    background-color: #E7E7E7;
+    border-radius: 8px;
+    min-width: 100%;
+    display: block;
+
+    &-error{
+      outline-color: $persimmon;
+      border-color: $persimmon;
+    }
+  }
+
+  &__edit-btn-wrapper {
+    align-items: center;
+    padding-right: 20px;
+    padding-left: 20px;
+    display: flex;
+
+    @media (max-width: $screen-md-max) {
+      padding-right: 0;
+      padding-left: 0;
+    }
+  }
+};
+
+.confirm-edit-btn,
+.exit-edit-btn {
+  position: relative;
+  margin: auto;
+  height: 25px;
+  width: 30px;
+}
+
+.confirm-edit-btn {
+  &::before {
+    border-bottom: 2px solid $ocean-green;
+    border-left: 2px solid $ocean-green;
+    transform: rotate(-45deg);
+    position: absolute;
+    height: 12px;
+    margin: auto;
+    width: 20px;
+    content: '';
+    top: -10px;
+    bottom: 0;
+    right: 0;
+    left: 0;
+  }
+}
+
+.exit-edit-btn {
+  &::after,
+  &::before {
+    background-color: $persimmon;
+    position: absolute;
+    height: 20px;
+    margin: auto;
+    content: '';
+    width: 2px;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    top: 0;
+  }
+
+  &::after {
+    transform: rotate(45deg);
+  }
+
+  &::before {
+    transform: rotate(-45deg);
+  }
+};

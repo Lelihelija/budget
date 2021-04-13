@@ -24,4 +24,9 @@
     display: block;
     margin: auto;
   }
+
+  input.error {
+    outline-color: $persimmon;
+    border-color: $persimmon;
+  }
 }
